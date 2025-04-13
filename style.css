@@ -1,151 +1,70 @@
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+/* Add these new styles to your existing CSS file */
 
-/* Base Styles */
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-/* Header Styles */
-header {
-    text-align: center;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 20px;
-}
-
-h1 {
-    color: #2c3e50;
-    margin-bottom: 5px;
-    font-size: 2.2em;
-}
-
-.subtitle {
-    color: #7f8c8d;
-    font-weight: 400;
-    margin-top: 0;
-}
-
-.contact-info {
-    margin-top: 15px;
-    font-size: 0.95em;
-}
-
-.contact-info i {
-    margin-right: 8px;
-    color: #4CAF50;
-}
-
-/* Section Styles */
-section {
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
     margin-bottom: 25px;
 }
 
-h2 {
-    color: #2c3e50;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-    font-size: 1.4em;
-    display: flex;
+/* Download PDF Button */
+.download-btn {
+    display: inline-flex;
     align-items: center;
-}
-
-h2 i {
-    margin-right: 10px;
-    color: #4CAF50;
-}
-
-/* Job Experience */
-.job {
-    margin-bottom: 20px;
-}
-
-.job h3 {
-    margin-bottom: 5px;
-    color: #34495e;
-}
-
-.company {
-    font-style: italic;
-    color: #7f8c8d;
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 0.9em;
-}
-
-/* Lists */
-ul {
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 8px;
-}
-
-/* Skills */
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    padding-left: 0;
-    list-style: none;
-}
-
-.skills li {
-    background-color: #e8f5e9;
-    color: #2e7d32;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
-}
-
-/* Languages */
-.languages {
-    display: flex;
-    gap: 15px;
-    padding-left: 0;
-    list-style: none;
-}
-
-.languages li {
+    background: #e74c3c;  /* PDF red */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
     font-weight: 500;
+    transition: all 0.3s;
 }
 
-/* Declaration */
-.declaration {
-    font-style: italic;
-    color: #555;
+.download-btn:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.signature {
-    font-weight: bold;
-    margin-top: 15px;
+.download-btn i {
+    margin-right: 8px;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
+/* Print Button */
+.print-btn {
+    display: inline-flex;
+    align-items: center;
+    background: #3498db;  /* Print blue */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.print-btn:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.print-btn i {
+    margin-right: 8px;
+}
+
+/* Print-specific styles */
+@media print {
+    .action-buttons {
+        display: none;
+    }
+    body {
+        background: white !important;
+    }
     .container {
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 1.8em;
-    }
-    
-    .contact-info {
-        font-size: 0.85em;
+        box-shadow: none !important;
     }
 }
